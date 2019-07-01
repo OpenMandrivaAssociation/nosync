@@ -18,10 +18,11 @@ like fsync or open.
 
 %build
 %setup_compile_flags
-%make_build
+%make_build CFLAGS=%{optflags}
 
 %install
-%make_install
+install -d %{buildroot}%{_libdir}/nosync
+install -p nosync.so %{buildroot}%{_libdir}/nosync/
 
 %files
 %doc AUTHORS README.md
