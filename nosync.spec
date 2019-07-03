@@ -18,7 +18,7 @@ like fsync or open.
 
 %build
 %setup_compile_flags
-%make_build CFLAGS=%{optflags}
+%make_build CFLAGS="%{optflags}"
 
 %install
 install -d %{buildroot}%{_libdir}/nosync
