@@ -1,6 +1,6 @@
 Name:		nosync
 Version:	1.1
-Release:	2
+Release:	3
 Summary:	Preload library for disabling file's content synchronization
 License:	ASL 2.0
 URL:		http://github.com/kjn/%{name}
