@@ -1,10 +1,11 @@
 Name:		nosync
 Version:	1.1
-Release:	3
+Release:	4
 Summary:	Preload library for disabling file's content synchronization
 License:	ASL 2.0
 URL:		http://github.com/kjn/%{name}
 Source0:	http://github.com/kjn/%{name}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Patch0: https://github.com/kjn/nosync/pull/4.patch
 BuildRequires:	make
 
 %description
@@ -17,7 +18,7 @@ like fsync or open.
 %autosetup -p1
 
 %build
-%setup_compile_flags
+%set_build_flags
 %make_build CFLAGS="%{optflags}"
 
 %install
